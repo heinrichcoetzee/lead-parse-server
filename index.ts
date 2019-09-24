@@ -7,6 +7,7 @@ import { environment } from "./env/environment";
 import bodyParser from "body-parser";
 import cors from 'cors';
 import { fetchStages } from "./src/routes/stages";
+import * as Parse from 'parse/node';
 
 const app = express();
 const port = process.env.PORT || 1337;
@@ -28,7 +29,7 @@ app.use('/parse', api);
 app.get('/', (req, res) => {
     res.send('Hello World')
 })
-
+Parse.initialize(process.env.APP_ID || environment.appId);
 app.get('/leads',getLeads);
 app.get('/lead/:id',getLeadById);
 app.post('/lead',createLead);

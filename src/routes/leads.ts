@@ -1,4 +1,4 @@
-import * as Parse from 'parse';
+import * as Parse from 'parse/node';
 
 const getLeads = (req, res) => {
     const query = new Parse.Query('Leads');

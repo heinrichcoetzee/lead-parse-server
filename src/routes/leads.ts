@@ -1,3 +1,4 @@
+import * as Parse from 'parse';
 
 const getLeads = (req, res) => {
     const query = new Parse.Query('Leads');

@@ -1,5 +1,5 @@
 import { Stages } from "../interfaces/Stages.interface";
-
+import * as Parse from 'parse';
 
 
 const fetchStages = async (req,res)=>{

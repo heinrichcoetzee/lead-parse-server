@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "typescript": "^3.6.2",
-    "@types/jest": "^24.0.18",
     "@types/express": "^4.17.1",
     "@types/parse": "^2.2.9",
     "jest": "^24.9.0"

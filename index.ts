@@ -2,11 +2,11 @@ import express from "express";
 // import parseServer from "parse-server";
 var ParseServer = require('parse-server').ParseServer;
 import path from "path";
-import Leads from "./src/routes/Leads";
+import Leads from "./src/routes/leads";
 import { environment } from "./env/environment";
 import bodyParser from "body-parser";
 import cors from 'cors';
-import Stages from "./src/routes/Stages";
+import Stages from "./src/routes/stages";
 
 const app = express();
 const port = process.env.PORT || 1337;

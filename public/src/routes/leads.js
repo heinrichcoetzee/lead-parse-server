@@ -39,4 +39,4 @@ const createLead = (req, res) => {
     });
 };
 exports.default = { getLeads, getLeadById, createLead };
-//# sourceMappingURL=leads.js.map
+//# sourceMappingURL=Leads.js.map

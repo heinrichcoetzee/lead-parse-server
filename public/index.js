@@ -29,9 +29,6 @@ app.use('/parse', api);
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-app.get('/test', function (req, res) {
-    res.sendFile(path_1.default.join(__dirname, 'test.html'));
-});
 app.get('/leads', Leads_1.default.getLeads);
 app.get('/lead/:id', Leads_1.default.getLeadById);
 app.post('/lead', Leads_1.default.createLead);

@@ -29,10 +29,6 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
-app.get('/test', function(req, res) {
-    res.sendFile(path.join(__dirname, 'test.html'));
-});
-
 app.get('/leads',Leads.getLeads);
 app.get('/lead/:id',Leads.getLeadById);
 app.post('/lead',Leads.createLead);

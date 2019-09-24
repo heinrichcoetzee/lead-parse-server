@@ -7,10 +7,11 @@ const express_1 = __importDefault(require("express"));
 // import parseServer from "parse-server";
 var ParseServer = require('parse-server').ParseServer;
 const path_1 = __importDefault(require("path"));
-const leads_1 = __importDefault(require("./src/routes/leads"));
+const Leads_1 = __importDefault(require("./src/routes/Leads"));
 const environment_1 = require("./env/environment");
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
+const Stages_1 = __importDefault(require("./src/routes/Stages"));
 const app = express_1.default();
 const port = process.env.PORT || 1337;
 // Serve static assets from the /public folder
@@ -31,9 +32,10 @@ app.get('/', (req, res) => {
 app.get('/test', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, 'test.html'));
 });
-app.get('/leads', leads_1.default.getLeads);
-app.get('/lead/:id', leads_1.default.getLeadById);
-app.post('/lead', leads_1.default.createLead);
+app.get('/leads', Leads_1.default.getLeads);
+app.get('/lead/:id', Leads_1.default.getLeadById);
+app.post('/lead', Leads_1.default.createLead);
+app.get('/stages/:columns', Stages_1.default.fetchStages);
 app.listen(port, () => {
     console.log(`Lead server running on ${port}`);
 });

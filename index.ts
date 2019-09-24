@@ -2,10 +2,12 @@ import express from "express";
 // import parseServer from "parse-server";
 var ParseServer = require('parse-server').ParseServer;
 import path from "path";
-import Leads from "./src/routes/leads";
+import Leads from "./src/routes/Leads";
 import { environment } from "./env/environment";
 import bodyParser from "body-parser";
 import cors from 'cors';
+import Stages from "./src/routes/Stages";
+
 const app = express();
 const port = process.env.PORT || 1337;
 
@@ -34,7 +36,8 @@ app.get('/test', function(req, res) {
 app.get('/leads',Leads.getLeads);
 app.get('/lead/:id',Leads.getLeadById);
 app.post('/lead',Leads.createLead);
- 
+app.get('/stages/:columns',Stages.fetchStages);
+
 app.listen(port,()=>{
     console.log(`Lead server running on ${port}`);
 })

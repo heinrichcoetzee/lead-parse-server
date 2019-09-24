@@ -44,4 +44,4 @@ const createLead = (req, res) => {
 
 };
 
-export default { getLeads, getLeadById, createLead };
+export { getLeads, getLeadById, createLead };

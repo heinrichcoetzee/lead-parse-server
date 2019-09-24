@@ -20,4 +20,4 @@ const fetchStages = async (req,res)=>{
       res.send(stages);
 }
 
-export default { fetchStages }
+export { fetchStages }
